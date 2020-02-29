@@ -18,6 +18,6 @@ jobs:
       # Version of Visual Studio to search; defaults to latest if not specified
       vs-version: # optional
   
-  -name: msbuild
-   run: msbuild
+    - name: msbuild
+      run: msbuild
     
