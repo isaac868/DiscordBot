@@ -8,13 +8,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    -name: checkout
-      uses: actions/checkout@v2
-      #working-directory: 
+      - name: checkout
+        uses: actions/checkout@v2
     
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v1
+      - name: setup-msbuild
+        uses: microsoft/setup-msbuild@v1
   
-    - name: msbuild
-      run: msbuild
+      - name: msbuild
+        run: msbuild
     
