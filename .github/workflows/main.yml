@@ -15,5 +15,5 @@ jobs:
         uses: microsoft/setup-msbuild@v1
   
       - name: msbuild
-        run: msbuild -property:Configuration=Debug -target:x64
+        run: msbuild -property:Configuration=Debug -property:ProcessorArchitecture=x64
     
