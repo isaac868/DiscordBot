@@ -16,3 +16,6 @@ jobs:
   
       - name: msbuild
         run: msbuild -property:Configuration=Release -property:ProcessorArchitecture=x64
+        
+      - name: test
+        run: vcpkg
