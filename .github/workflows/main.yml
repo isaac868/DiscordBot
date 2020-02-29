@@ -12,11 +12,6 @@ jobs:
     
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1
-      with:
-      # Folder location of where vswhere.exe is located if a self-hosted agent
-      vswhere-path: # optional
-      # Version of Visual Studio to search; defaults to latest if not specified
-      vs-version: # optional
   
     - name: msbuild
       run: msbuild
