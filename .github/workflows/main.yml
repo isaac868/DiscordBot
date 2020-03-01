@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on: 
+  push:
+  schedule:
+    - cron: '1 1 * * 1,4'
 
 jobs:
   build:
@@ -13,7 +16,13 @@ jobs:
     
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1
-  
+
+      - name: Cache vcpkg modules
+        uses: actions/cache@v1
+        with:
+          path: /vcpkg 
+          key: cache 
+      
       - name: Build Microsofts rest library
         run: vcpkg install cpprestsdk cpprestsdk:x64-windows
         
