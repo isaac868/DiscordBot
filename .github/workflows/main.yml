@@ -14,11 +14,12 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1
   
-      - name: msbuild
-        run: msbuild -property:Configuration=Release -property:ProcessorArchitecture=x64
-        
       - name: Build Microsofts rest library
         run: vcpkg install cpprestsdk cpprestsdk:x64-windows
         
       - name: Integrate vcpkg files
         run: vcpkg integrate install
+
+      - name: msbuild
+        run: msbuild -property:Configuration=Release -property:ProcessorArchitecture=x64
+    
