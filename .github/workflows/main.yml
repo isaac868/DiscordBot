@@ -17,11 +17,17 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1
 
-      - name: Cache vcpkg modules
+      - name: Cache vcpkg modules 1
         uses: actions/cache@v1
         with:
-          path: C:\vcpkg 
-          key: cache 
+          path: C:\vcpkg\installed
+          key: installed-dir 
+
+      - name: Cache vcpkg modules 2
+        uses: actions/cache@v1
+        with:
+          path: C:\vcpkg\packages
+          key: packages-dir 
       
       - name: Build Microsofts rest library
         run: vcpkg install cpprestsdk cpprestsdk:x64-windows
