@@ -1,7 +1,8 @@
-﻿#include "..\inlcude\DiscordBot.h"
+﻿#include "DiscordBot.h"
 
-int main() {
-	BotClientClass client("NTUyMDA1MjMwNTk5MDc3ODk5.XHy87g.gMa1lvVBQrGm42E46cEpcBcesXk", SleepyDiscord::USER_CONTROLED_THREADS);
+int main(int argc, char* argv[]) 
+{
+	BotClientClass client(argv[1], SleepyDiscord::USER_CONTROLED_THREADS);
 	client.setIntents(
 		SleepyDiscord::Intent::SERVER_MESSAGES,
 		SleepyDiscord::Intent::DIRECT_MESSAGES);

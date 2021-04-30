@@ -5,7 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("DiscordBot")
 
-include_directories("include")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/inlcude")
+
 file(GLOB SOURCES "source/*.cpp")
 
 include(FetchContent)
