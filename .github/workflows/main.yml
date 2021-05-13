@@ -2,8 +2,6 @@ name: CI
 
 on: 
   push:
-  schedule:    
-  - cron: '1 1 * * 1,4'
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
